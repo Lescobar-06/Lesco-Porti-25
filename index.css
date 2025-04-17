@@ -39,7 +39,8 @@ body {
 }
 
 .nav-links a:hover {
-  color: #111827;
+  color: #ff5e00;
+  font-weight: bold;
 }
 
 .nav-title h1 {
