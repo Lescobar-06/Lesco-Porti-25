@@ -107,3 +107,13 @@ img.responsive {
   display: flex;
   justify-items: center;
 }
+
+span.close {
+  position: absolute;
+  top: 100px;
+  color: #ff000091;
+  font-size: 71px;
+  font-weight: bold;
+  transition: 0.3s;
+  right: 300px;
+}
