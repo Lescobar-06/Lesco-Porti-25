@@ -176,7 +176,7 @@ body {
 }
 
 .photography-hero h2 {
-  font-size: 3rem;
+  font-size: 10rem;
   font-weight: bold;
   margin-bottom: 2rem;
   color: #111827;
@@ -240,11 +240,11 @@ body {
   }
 
   .hero h2 {
-    font-size: 2.5rem;
+    font-size: 10rem;
   }
 
   .photography-hero h2 {
-    font-size: 2.5rem;
+    font-size: 10rem;
   }
 }
 
