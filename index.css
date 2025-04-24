@@ -31,6 +31,14 @@ body {
   align-items: center;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100;
+  gap: 2rem;
+}
+
 .nav-links a {
   color: #4b5563;
   text-decoration: none;
