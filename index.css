@@ -51,9 +51,27 @@ body {
   font-weight: bold;
 }
 
+.nav-title {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.nav-title a {
+  text-decoration: none;
+  color: #393c3f;
+  transition: color 0.2s;
+}
+
 .nav-title h1 {
   font-size: xx-large;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-title h1:hover {
+  color: #ff5e00;
+  font-weight: bold;
+  transition: color 0.2s;
 }
 
 .nav-social {
@@ -81,7 +99,6 @@ body {
 
 .mobile-menu {
   display: none;
-  padding: 1rem;
   background: white;
 }
 
@@ -104,14 +121,14 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 8rem 21rem 2rem;
+  padding: 8rem 1rem 4rem;
   text-align: center;
   max-width: 1280px;
   margin: 0 auto;
 }
 
 .hero h2 {
-  font-size: 7rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
@@ -203,10 +220,10 @@ body {
   }
 
   .hero h2 {
-    font-size: 2rem;
+    font-size: 5rem;
   }
 
   .hero p {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
