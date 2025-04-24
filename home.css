@@ -154,28 +154,28 @@ main {
   align-items: center;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  width: 100;
-  gap: 2rem;
+nav-title {
+  font-size: larger;
+  font-weight: bolder;
 }
 
-.nav-links a {
-  color: #4b5563;
+.nav-title a {
   text-decoration: none;
-  margin-right: 1rem;
+  color: #000000;
   transition: color 0.2s;
-}
-
-.nav-links a:hover {
-  color: #111827;
+  font-weight: bolder;
 }
 
 .nav-title h1 {
-  font-size: 1.5rem;
+  font-size: xx-large;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-title h1:hover {
+  color: #ff5e00;
+  font-weight: bold;
+  transition: color 0.2s;
 }
 
 .nav-social {
