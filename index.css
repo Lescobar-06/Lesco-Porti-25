@@ -104,20 +104,20 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 8rem 1rem 4rem;
+  padding: 8rem 21rem 2rem;
   text-align: center;
   max-width: 1280px;
   margin: 0 auto;
 }
 
 .hero h2 {
-  font-size: 3rem;
+  font-size: 7rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
 
 .hero p {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #4b5563;
   max-width: 48rem;
   margin: 0 auto;

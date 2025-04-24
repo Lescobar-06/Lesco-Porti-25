@@ -3,13 +3,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif,
+    sans-serif;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Helvetica, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
 }
 
 /* Welcome Overlay */
@@ -19,7 +30,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(180, 144, 97, 0.979);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +49,7 @@ body {
 }
 
 .welcome-content h1 {
-  font-size: 3rem;
+  font-size: 10rem;
   margin-bottom: 1rem;
   opacity: 0;
   animation: fadeInUp 0.8s ease forwards;
@@ -51,18 +62,26 @@ body {
   animation: fadeInUp 0.8s ease 0.3s forwards;
 }
 
+.welcome-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.5s forwards;
+}
+
 .enter-button {
-  background: transparent;
+  background: #0000000f;
   border-radius: 20px;
-  color: white;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.61);
+  font-size: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
   opacity: 0;
   animation: fadeInUp 0.8s ease 0.6s forwards;
   position: relative;
   overflow: hidden;
+  padding: 5px;
 }
 
 .enter-button::after {
@@ -78,7 +97,7 @@ body {
 }
 
 .enter-button:hover {
-  color: black;
+  color: rgb(29, 17, 1);
   transform: translateY(-3px);
 }
 
@@ -333,11 +352,13 @@ body {
 
   .welcome-content p {
     font-size: 1rem;
+    max-width: 390px;
+    color: rgba(255, 255, 255, 0.6);
   }
 
   .enter-button {
-    padding: 0.8rem 1.6rem;
-    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
   }
 }
 
@@ -361,6 +382,39 @@ body {
   }
 
   .welcome-content h1 {
-    font-size: 1.8rem;
+    font-size: 10rem;
+    color: black;
   }
+}
+
+h3 {
+  font-size: 5rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+p.role {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #000000;
+  text-align: center;
+}
+
+.portfolio {
+  padding: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+main section.portfolio .portfolio-grid .portfolio-item a img {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.portfolio-item a:hover img {
+  transform: scale(1.05);
+}
+.portfolio-item a:hover .portfolio-overlay {
+  opacity: 1;
 }
