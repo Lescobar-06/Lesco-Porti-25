@@ -244,3 +244,33 @@ body {
   font-size: 1.12rem;
   margin-bottom: 2rem;
 }
+
+main section.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.box video {
+  width: 90vw;
+  height: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.box {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
