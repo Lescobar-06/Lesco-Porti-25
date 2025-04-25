@@ -71,7 +71,6 @@ body {
 
 .mobile-menu {
   display: none;
-  background: white;
 }
 
 .mobile-menu.active {

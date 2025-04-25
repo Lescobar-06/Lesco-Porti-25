@@ -72,16 +72,16 @@ main {
 
 .enter-button {
   background: #0000000f;
-  border-radius: 20px;
+  border-radius: 116px;
   color: rgba(255, 255, 255, 0.61);
-  font-size: 30px;
+
   cursor: pointer;
   transition: all 0.3s ease;
   opacity: 0;
   animation: fadeInUp 0.8s ease 0.6s forwards;
   position: relative;
   overflow: hidden;
-  padding: 5px;
+  padding: 20px;
 }
 
 .enter-button::after {
@@ -145,7 +145,7 @@ main {
 }
 
 .nav-container {
-  max-width: 1280px;
+  max-width: 1135px;
   margin: 0 auto;
   padding: 0 1rem;
   height: 4rem;
@@ -176,6 +176,37 @@ nav-title {
   color: #ff5e00;
   font-weight: bold;
   transition: color 0.2s;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  gap: 2rem;
+}
+.nav-links a {
+  color: #4b5563;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #ff5e00;
+  font-weight: bold;
+}
+.nav-links a.active {
+  color: #ff5e00;
+  font-weight: bold;
+}
+
+.nav-title {
+  text-align: center;
+  /* background-color: red;*/
+  width: 100%;
+  display: flex;
+  flex-direction: inherit;
 }
 
 .nav-social {
@@ -350,14 +381,14 @@ nav-title {
   }
 
   .welcome-content p {
-    font-size: 1rem;
-    max-width: 390px;
+    font-size: 20px;
+    max-width: 325px;
     color: rgba(255, 255, 255, 0.6);
   }
 
   .enter-button {
     padding: 0.5rem 1rem;
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 
@@ -382,14 +413,13 @@ nav-title {
 
   .welcome-content h1 {
     font-size: 10rem;
-    color: black;
+    color: rgb(255, 255, 255);
   }
 }
 
 h3 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: bolder;
-  text-align: center;
 }
 
 p.role {
@@ -397,6 +427,7 @@ p.role {
   font-weight: normal;
   color: #000000;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .portfolio {
@@ -405,15 +436,47 @@ p.role {
   margin: 0 auto;
 }
 
+.portfolio-overlay {
+  display: grid;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
 main section.portfolio .portfolio-grid .portfolio-item a img {
   width: 90%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
 }
+
+.portfolio-item {
+  display: grid;
+  justify-content: center;
+}
+
 .portfolio-item a:hover img {
   transform: scale(1.05);
+  opacity: 1;
 }
+
+main section.portfolio .portfolio-grid .portfolio-item a img ::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+}
+
 .portfolio-item a:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-item a:hover img {
+  transform: scale(1.05);
   opacity: 1;
 }

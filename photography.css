@@ -162,13 +162,14 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
+  background: white;
+  color: rgb(255, 92, 92);
   border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 24px;
   transition: background-color 0.3s ease;
+  border-radius: 50px;
 }
 
 .nav-button:hover {
