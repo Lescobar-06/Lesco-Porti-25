@@ -418,8 +418,9 @@ nav-title {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bolder;
+  text-align: center;
 }
 
 p.role {
@@ -436,10 +437,15 @@ p.role {
   margin: 0 auto;
 }
 
+.portfolio-grid {
+  display: grid;
+}
+
 .portfolio-overlay {
   display: grid;
   justify-content: center;
   transition: opacity 0.3s ease-in-out;
+  width: 90%;
 }
 
 main section.portfolio .portfolio-grid .portfolio-item a img {
@@ -453,6 +459,14 @@ main section.portfolio .portfolio-grid .portfolio-item a img {
 .portfolio-item {
   display: grid;
   justify-content: center;
+}
+
+main section.portfolio .portfolio-grid .portfolio-item a {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
 .portfolio-item a:hover img {
