@@ -3,55 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thabang Makolo - Portfolio</title>
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lexend:wght@400;500&family=Montserrat:wght@400;500&family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/src/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/src/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/src/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/src/site.webmanifest" />
-    <link rel="mask-icon" href="/src/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Thabang Makolo's Portfolio" />
-    <meta
-      name="keywords"
-      content="Portfolio, Thabang Makolo, Web Development"
-    />
-    <meta name="author" content="Thabang Makolo" />
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-    <meta name="google" content="notranslate" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" />
+    <title>Interactive Gallery - Thabang Makolo</title>
+    <link rel="stylesheet" href="home.css" />
   </head>
   <body>
+    <!-- Welcome Overlay -->
+    <div class="welcome-overlay" id="welcomeOverlay">
+      <div class="welcome-content">
+        <h1 class="welcome-title">Ola!</h1>
+        <p>Explore my collection of photographs and visual stories</p>
+        <button class="enter-button" onclick="enterSite()">...here</button>
+      </div>
+    </div>
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-links">
@@ -59,9 +22,10 @@
           <a href="index.html" class="nav-link">work</a>
           <a href="contacts.html" class="nav-link">about/contact</a>
         </div>
-
         <div class="nav-title">
-          <a href="home.html">TM</a>
+          <div class="nav-title">
+            <a href="home.html">TM</a>
+          </div>
         </div>
         <div class="nav-social">
           <a href="https://facebook.com/Lescomart" class="social-link">
@@ -197,64 +161,21 @@
     </nav>
 
     <main>
-      <section class="hero">
-        <h2>Gallery</h2>
-        <p>
-          <span>Explore</span> my portfolio to discover the journey,
-          experiences, and efforts I bear and how I can contribute to your
-          team's progress that leads to success.
-        </p>
-      </section>
-
       <section class="portfolio">
         <div class="portfolio-grid">
           <div class="portfolio-item">
-            <a href="projects.html">
-              <img src="img/me_I.jpg" alt="Project Management" />
+            <a href="index.html">
+              <img src="img/Profile-Picture.jpg" alt="Pro picture" />
             </a>
 
-            <a href="projects.html">
-              <div class="portfolio-overlay">
-                <h3>Project Management</h3>
-                <p>individual to joint projects</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="portfolio-item">
-            <a href="photography.html">
-              <img src="img/Slow-Tv.JPG" alt="Photography" />
-            </a>
-
-            <a href="photography.html">
-              <div class="portfolio-overlay">
-                <h3>Photography</h3>
-                <p>from serene landscapes to studio shots</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="portfolio-item">
-            <a href="dzn.html">
-              <img src="img/Tryptch Canvas V2-25_1-05.jpg" alt="DZN" />
-            </a>
-
-            <a href="dzn.html">
-              <div class="portfolio-overlay">
-                <h3>Dee-Zy-N</h3>
-                <p>illustrations, logos &amp; more</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="portfolio-item">
-            <a href="paintings.html">
-              <img src="img/Self-Introspection_2023.jpg" alt="Format Print" />
-              <div class="portfolio-overlay">
-                <h3>Paintings &amp; Large Prints</h3>
-                <p>paintings and package label stickers, banners, and more</p>
-              </div>
-            </a>
+            <div class="portfolio-overlay">
+              <h3>Thabang Makolo</h3>
+              <em
+                ><p class="role">
+                  Web Developer, Graphic Designer &amp; Photographer
+                </p></em
+              >
+            </div>
           </div>
         </div>
       </section>
@@ -265,6 +186,65 @@
         const menu = document.getElementById("mobileMenu");
         menu.classList.toggle("active");
       }
+
+      function enterSite() {
+        const overlay = document.getElementById("welcomeOverlay");
+        overlay.classList.add("fade-out");
+        setTimeout(() => {
+          overlay.style.display = "none";
+        }, 1000);
+      }
+
+      // Gallery functionality
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      const closeButton = document.querySelector(".close-button");
+      const prevButton = document.querySelector(".prev-button");
+      const nextButton = document.querySelector(".next-button");
+      const galleryItems = document.querySelectorAll(".gallery-item");
+      let currentIndex = 0;
+
+      galleryItems.forEach((item) => {
+        item.addEventListener("click", function () {
+          modal.style.display = "flex";
+          modalImg.src = this.querySelector("img").src;
+          currentIndex = parseInt(this.dataset.index);
+        });
+      });
+
+      closeButton.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+
+      prevButton.addEventListener("click", function () {
+        currentIndex =
+          (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        modalImg.src = galleryItems[currentIndex].querySelector("img").src;
+      });
+
+      nextButton.addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        modalImg.src = galleryItems[currentIndex].querySelector("img").src;
+      });
+
+      window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", function (event) {
+        if (modal.style.display === "flex") {
+          if (event.key === "ArrowLeft") {
+            prevButton.click();
+          } else if (event.key === "ArrowRight") {
+            nextButton.click();
+          } else if (event.key === "Escape") {
+            closeButton.click();
+          }
+        }
+      });
     </script>
   </body>
 </html>
