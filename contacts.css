@@ -47,6 +47,25 @@ body {
   animation-delay: 4s;
 }
 
+nav-title {
+  display: flex;
+  align-items: center;  
+  font-size: larger;
+  font-weight: bolder;
+  text-decoration: none;
+  color: #393c3f;
+  transition: color 0.2s;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.nav-title a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.2s;
+  font-weight: bolder;
+}
+
 .nav-title h1 {
   font-size: 1.5rem;
   font-weight: bold;
