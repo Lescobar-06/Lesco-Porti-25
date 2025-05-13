@@ -174,7 +174,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.753);
   color: white;
   border: none;
   padding: 1rem;
@@ -184,7 +184,7 @@ body {
 }
 
 .nav-button:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.829);
 }
 
 .prev-button {
@@ -209,6 +209,7 @@ body {
 
   .menu-button {
     display: block;
+    color: black;
   }
 
   .gallery-grid {
@@ -239,6 +240,7 @@ body {
   .nav-button {
     padding: 0.6rem;
     font-size: 18px;
+    color: black;
   }
 }
 
