@@ -44,6 +44,29 @@ body {
 .nav-title h1 {
   font-size: 1.5rem;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links a {
+  color: #4b5563;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: color 0.2s;
+}
+
+nav-title {
+  display: flex;
+  align-items: center;
+  font-size: larger;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.nav-title a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.2s;
+  font-weight: bolder;
 }
 
 .nav-social {

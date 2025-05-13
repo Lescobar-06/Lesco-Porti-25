@@ -41,6 +41,18 @@ body {
   color: #111827;
 }
 
+.nav-title {
+  display: flex;
+  align-items: center;
+}
+
+.nav-title a {
+  color: #4b5563;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: color 0.2s;
+}
+
 .nav-title h1 {
   font-size: 1.5rem;
   font-weight: bold;
